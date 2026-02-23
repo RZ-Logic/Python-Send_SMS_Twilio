@@ -32,29 +32,32 @@ The script relies on environment variables to authenticate with Twilio. You must
 export TWILIO_ACCOUNT_SID="your_account_sid"
 export TWILIO_AUTH_TOKEN="your_auth_token"
 export TWILIO_FROM_NUMBER="+12345678900"
+```
 
 On Windows (Command Prompt):
-
+```
 set TWILIO_ACCOUNT_SID=your_account_sid
 set TWILIO_AUTH_TOKEN=your_auth_token
 set TWILIO_FROM_NUMBER=+12345678900
+```
 
 💻 Usage
 Run the script from the command line using the following syntax:
 
-python send_sms.py "<to_number(s)>" "<message>"
+`python send_sms.py "<to_number(s)>" "<message>"`
 
 Examples
 1. Sending to a single number:
 
-python send_sms.py "+14155551234" "Hello from Python automation!"
+`python send_sms.py "+14155551234" "Hello from Python automation!"`
 
 2. Broadcasting to multiple numbers:
 Enclose the list of space-separated E.164 formatted numbers in quotes.
 
-python send_sms.py "+19059999999 +14155551234 +6471234567" "Group alert: The automated system has finished processing."
+`python send_sms.py "+19059999999 +14155551234 +6471234567" "Group alert: The automated system has finished processing."`
 
 📁 File Structure
-send_sms.py: The main executable script that parses command-line arguments and passes them to the helper function.
 
-sms_helper.py: Contains the _get_client() authentication logic and the send_sms() function that interacts with the Twilio REST API.
+`send_sms.py`: The main executable script that parses command-line arguments and passes them to the helper function.
+
+`sms_helper.py`: Contains the _get_client() authentication logic and the send_sms() function that interacts with the Twilio REST API.
